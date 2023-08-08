@@ -10,15 +10,19 @@ if (num1==num2):
         
 print("Si desea apostar al valor 1 ingrese. Si desea apostar al valor 2 ingrese 2")
 valor = int(input("Ingrese una opcion"))
+while(valor!=1 and valor!=2):
+    valor = int(input("Ingrese una opcion posible"))
 if (valor==1 and num1>num2):
-    print("Felicidades Ganaste")
-else:
-    print("Perdiste toda tu casa")
-    if(valor==2 and num2>num1):
-        print("Felicidades Ganaste")
-    else:
-        print("Perdiste toda tu casa")
-print("El valor N1 era:",num1,"el valor N2 era:",num2)   
-    
+        print("Ganaste")
+elif (valor==1 and num1<num2):
+        print("Perdiste")
+if(valor==2 and num2>num1):
+            print("Ganaste")
+elif(valor==2 and num2<num1):
+            print("Perdiste")
+            
+print("El valor N1 fue:",num1,"el valor N2 fue:",num2,"y el valor que apostaste fue:",valor)
+        
+
     
 #Con esto se comenta si no me equivoco#
