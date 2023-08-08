@@ -1,28 +1,50 @@
 import random
-num1 = random.randint(1,10)
-num2 = random.randint(1,10)
-print(num1,num2)
-if (num1==num2):
-    while(num1==num2):    
-        num1 = random.randint(1,10)
-        num2 = random.randint(1,10)
-        print(num1,num2)
-        
-print("Si desea apostar al valor 1 ingrese. Si desea apostar al valor 2 ingrese 2")
-valor = int(input("Ingrese una opcion"))
-while(valor!=1 and valor!=2):
-    valor = int(input("Ingrese una opcion posible"))
-if (valor==1 and num1>num2):
-        print("Ganaste")
-elif (valor==1 and num1<num2):
-        print("Perdiste")
-if(valor==2 and num2>num1):
-            print("Ganaste")
-elif(valor==2 and num2<num1):
-            print("Perdiste")
-            
-print("El valor N1 fue:",num1,"el valor N2 fue:",num2,"y el valor que apostaste fue:",valor)
-        
 
-    
-#Con esto se comenta si no me equivoco#
+partidas_ganadas = 0
+partidas_perdidas = 0
+
+def jugar_partida():
+    global partidas_ganadas, partidas_perdidas
+
+    while True:
+        num1 = random.randint(1, 10)
+        num2 = random.randint(1, 10)
+
+        if num1 != num2:
+            break
+
+    print("Valores generados:", num1, num2)
+
+    while True:
+        try:
+            apuesta = int(input("¿Apuestas por el valor 1 o el valor 2? "))
+            if apuesta not in (1, 2):
+                print("Debes ingresar 1 o 2.")
+            else:
+                break
+        except ValueError:
+            print("Ingresa un valor numérico.")
+
+    if apuesta == 1:
+        ganador = max(num1, num2)
+        perdedor = min(num1, num2)
+    else:
+        ganador = min(num1, num2)
+        perdedor = max(num1, num2)
+
+    print("El valor ganador es:", ganador)
+    if apuesta == ganador:
+        print("¡Has ganado!")
+        partidas_ganadas += 1
+    else:
+        print("Has perdido.")
+        partidas_perdidas += 1
+
+while True:
+    jugar_partida()
+    respuesta = input("¿Quieres volver a jugar? (s/n): ")
+    if respuesta.lower() != "s":
+        break
+
+print("Partidas ganadas:", partidas_ganadas)
+print("Partidas perdidas:", partidas_perdidas)
