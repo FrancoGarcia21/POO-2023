@@ -1,0 +1,15 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>10</x><y>0</y><w>210</w><h>210</h></coordinates><panel_attributes>&lt;&lt;Persona&gt;&gt;
+--
+-nombre = String
+-apellido = String
+-fecha_nacimiento = datetime
+--
+get_nombre() 
+set_nombre(value:String)
+get_apellido() 
+set_apellido(value:String)
+get_fecha_nacimiento()
+set_fecha_nacimiento(value:datetime)
+--
+Responsibilities
+--Por el momento no tiene</panel_attributes><additional_attributes></additional_attributes></element></diagram>

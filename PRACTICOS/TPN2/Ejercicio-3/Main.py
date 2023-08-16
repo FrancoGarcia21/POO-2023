@@ -1,6 +1,7 @@
 from Alumno import Alumno
 
 alumno1 = Alumno()
+#alumno1 = alumno1.iniciar()
 alumno1.iniciar()## esta mal usarlo asi pero supuestamente no debo cambiar la clase main
 #print(f'{alumno1.getNombreYapellido()}{" DNI: "}{alumno1.getDni()}')### borrar esto
 alumno1.setNombre("Alejandro")
