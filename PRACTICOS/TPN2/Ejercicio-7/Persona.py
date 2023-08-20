@@ -1,5 +1,5 @@
+from datetime import datetime,date
 class Persona:
-    from datetime import datetime
     
     def __init__(self,nombre,apellido,fecha_nacimiento):
         self.__nombre = nombre
@@ -18,8 +18,16 @@ class Persona:
     def set_apellido(self,apellido):
         self.__apellido = apellido
         
+    def get_apellido(self):
+        return self.__fecha_nacimiento
+        
     def to_string(self):
         return (f"Nombre:{self.__nombre}. Apellido: {self.__apellido}. Fecha de Nacimiento:{self.__fecha_nacimiento}")
     
-        
-        
+    
+    
+    def devolver_edad(self):
+        hoy = datetime.today().year
+        fecha = datetime.strptime(self.__fecha_nacimiento,'%Y-%m-%d')
+        edad = hoy - fecha.year
+        return (f"Edad: {edad}")

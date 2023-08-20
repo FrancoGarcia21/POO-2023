@@ -12,6 +12,7 @@ class Alumno:
         self.__dni = int(input("Ingrese el DNI del alumno: "))
     
     def iniciar_con_nom_ape(self,nombre,apellido):
+        #alumno = cls() #fijate como sobrecargar el constructor
         self.__nombre = nombre
         self.__apellido = apellido
         
