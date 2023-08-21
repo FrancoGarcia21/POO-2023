@@ -53,7 +53,7 @@ censo1.cantidad_personas()## parte del ejercicio 9
 censo1.promedio_total_familias()## parte del ejercicio 9
 
 
-print(familia1.cantidad_trabajadores())
+#print(familia1.cantidad_trabajadores())
 censo1.cantidad_total_trabajadores()## parte del ejercicio 9 
 
 print(persona1.puede_trabajar())## ejercicio 10
