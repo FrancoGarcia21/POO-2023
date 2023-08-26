@@ -1,0 +1,1 @@
+[LOG] Database: procesa consulta: select * from mi_tabla

@@ -1,0 +1,1 @@
+[LOG] Servidor: envia petición: https://www.google.com/search?q=python
