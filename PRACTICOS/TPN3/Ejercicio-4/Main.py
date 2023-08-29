@@ -21,9 +21,9 @@ arque = Arquero("Franco Garcia")
 arque2 = Arquero("Ricado Ford")
 mago = Mago("Rey")
 
-pala1.atacar(pala2)
+pala1.atacar(mago)
+arque.atacar(mago)
 arque.atacar(pala2)
-arque.atacar(pala2)
 pala1.atacar(pala2)
-mago.atacar(pala1)
+#mago.defender(pala1.atacar())
 
