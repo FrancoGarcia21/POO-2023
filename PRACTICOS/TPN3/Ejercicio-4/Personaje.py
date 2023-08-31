@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class Personaje(ABC):
     def __init__(self,nombre,vida,nivelAtaque,nivelDefensa):
         self._nombre = nombre
@@ -8,10 +9,25 @@ class Personaje(ABC):
         self._nivelDefensa = nivelDefensa
         
     def atacar(self,enemigo):
-        #self.__enemigo
-        print(f"{self._nombre} Ataca a: {enemigo._nombre} !!!! ")#### tambien pense que en vez de atacar deberia tener un
-        enemigo._vida -= 30                                    #### metodo que sea absorver danio ? no se bien como seria la logica
-                                                            ### o pode haceerlo todo en un metodo unico
+        print(f"{self._nombre} Ataca a: {enemigo._nombre} !!!! ")
+        enemigo._vida -= 30                                                                                    
     @abstractmethod
     def defender(self):
         pass
+    
+    
+    def get_vida(self):
+        return self._vida
+    
+    def get_nombre(self):
+        return self._nombre
+'''
+class VidaCeroError(Exception):
+    def __init__(self, personaje):
+        self._personaje = personaje  
+        super().__init__(f"{self._personaje.get_nombre()} ha perdido toda su vida")
+    
+    except VidaCeroError as e:
+        print(e)
+        break
+        '''
