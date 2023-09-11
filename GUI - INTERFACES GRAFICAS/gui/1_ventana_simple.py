@@ -1,9 +1,9 @@
-from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QMainWindow
+from PyQt6.QtWidgets import QApplication, QMainWindow
 import sys
 app = QApplication(sys.argv)
 #window = QWidget()
 #window = QPushButton("Apreta")
-window = QMainWindow()
+window = QMainWindow()#cada vez que creo una ventana debo decirle que se muestre
 window.show()  # las ventanas por defecto no se muestran, hay que mostrarlas
 # Comienza el loop de eventos.
 app.exec()

@@ -12,7 +12,7 @@ class MainWindow(QMainWindow):
         #textChanged es un signal
         #setText es un slot
         self.input.textChanged.connect(self.label.setText)
-       #creo un layout y agrego los elementos.
+        #creo un layout y agrego los elementos.
         layout = QVBoxLayout()
         layout.addWidget(self.input)
         layout.addWidget(self.label)
