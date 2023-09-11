@@ -1,5 +1,13 @@
 from Personaje import Personaje
 import random 
+from Personaje import VidaCeroError
+
+# class VidaCeroError(Exception):
+#     def __init__(self, personaje):
+#         self._personaje = personaje
+#         personaje.set_vida(0)  # Establece la vida del personaje en 0
+#         super().__init__(f"{self._personaje.get_nombre()} ha perdido toda su vida")
+
 
 class Paladin(Personaje):
     
@@ -23,8 +31,8 @@ class Paladin(Personaje):
                 print(f"{self._nombre} se alcanzo a defender")
             else:
                 print("El enemigo no alcanzo a cubirse")
-        if vida <= 0:### aqui deberia poner la excepcion por esta parte del codigo
-            raise 
-            #self._vida = 0
-        #print(f"La vida del personaje bajo a {vida}")
+        #raise VidaCeroError(self)
+            if vida <= 0:### aqui deberia poner la excepcion por esta parte del codigo
+                self._vida = 0
+        print(f"La vida del personaje bajo a {vida}")
     

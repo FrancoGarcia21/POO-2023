@@ -15,19 +15,19 @@ class Personaje(ABC):
     def defender(self):
         pass
     
+    def set_vida(self,numero):
+        self._vida = numero
     
     def get_vida(self):
         return self._vida
     
     def get_nombre(self):
         return self._nombre
-'''
+
 class VidaCeroError(Exception):
     def __init__(self, personaje):
-        self._personaje = personaje  
+        self._personaje = personaje
+        personaje.set_vida(0)  # Establece la vida del personaje en 0
         super().__init__(f"{self._personaje.get_nombre()} ha perdido toda su vida")
+
     
-    except VidaCeroError as e:
-        print(e)
-        break
-        '''

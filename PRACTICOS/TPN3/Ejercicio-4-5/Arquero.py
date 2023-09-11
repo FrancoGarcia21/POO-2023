@@ -3,7 +3,7 @@ import random
 
 class Arquero(Personaje):
     def __init__(self, nombre):
-        super().__init__(nombre,vida=100, nivelAtaque=150, nivelDefensa=50)
+        super().__init__(nombre,vida=80, nivelAtaque=150, nivelDefensa=50)
         
     def atacar(self,enemigo):
         super().atacar(enemigo)
@@ -23,3 +23,5 @@ class Arquero(Personaje):
         if vida <= 0:# por aqui deberia poner la excepcion 
             self._vida = 0
         print(f"La vida del persona bajo a {self._vida}")
+        
+        ## esta clase anda asi

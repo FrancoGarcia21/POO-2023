@@ -29,26 +29,28 @@ arque = Arquero("Franky")
 arque2 = Arquero("Ricado Ford")
 personaje_actual = random.choice([pala1, arque])# en una lista d eobjeto nos da uno alazar
 
+
+
+
 combatefinalizado = False
-while combatefinalizado == True:
-        if personaje_actual == pala1:
-            pala1.atacar(arque)
-            personaje_actual = arque  
-        else:
-            arque.atacar(pala1)
-            personaje_actual = pala1
+while not combatefinalizado:
+    if personaje_actual == pala1:
+        pala1.atacar(arque)
+        personaje_actual = arque  
+    else:
+        arque.atacar(pala1)
+        personaje_actual = pala1
             
-        if arque.get_vida() <= 0:
-            print(f"{arque.get_nombre()} ha perdido el combate. {arque.get_vida()}")
-            combatefinalizado == True
-            #raise VidaCeroError(pala1)
-        if pala1.get_vida() <= 0:
-            print(f"{arque.get_nombre()} ha perdido el combate. {pala1.get_vida()}")## puse este get para saber sia ndaba
-            combatefinalizado =- True
-            #raise VidaCeroError(arque)
+    if arque.get_vida() <= 0:
+        print(f"{arque.get_nombre()} ha perdido el combate. {arque.get_vida()}")
+        combatefinalizado = True
+    if pala1.get_vida() <= 0:
+        print(f"{arque.get_nombre()} ha perdido el combate. {pala1.get_vida()}")## puse este get para saber sia ndaba
+        combatefinalizado = True
         
     
+    
 '''
-    La excepcion deberia estar implementada en el metodo defende 
-    y el bucle debe cortat cuando uno d elos personajes muera pero NUNCA usar una excepcion para cerrar un bucle
-    '''
+La excepcion deberia estar implementada en el metodo defende 
+y el bucle debe cortat cuando uno d elos personajes muera pero NUNCA usar una excepcion para cerrar un bucle
+'''
