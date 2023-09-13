@@ -6,9 +6,9 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("Mi Aplicación")
         button = QPushButton("Apreta")
-        button.setCheckable(True)
+        button.setCheckable(True)#le decimos que el boton es chequeable
         #clicked es un signal
-        button.clicked.connect(self.accion_boton)
+        button.clicked.connect(self.accion_boton)#con connect estamos coenctado con la accion que es el click del mouse
         # Set the central widget of the Window.
         self.setCentralWidget(button)
 

@@ -7,14 +7,14 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.setWindowTitle("Mi App")
-        widget = QComboBox()
+        widget = QComboBox()#creo el cobobox y le agrego los items
         widget.addItems(["Uno", "Dos", "Tres"])
 
         # Envia la posición actual del item seleccionado.
-        widget.currentIndexChanged.connect( self.index_changed )
+        widget.currentIndexChanged.connect( self.index_changed )#cada signal tiene su propio slot
 
         # Otro Signal para poder capturar el evento
-        widget.currentTextChanged.connect( self.text_changed )
+        widget.currentTextChanged.connect( self.text_changed )#porque son 3 distitntos
 
         self.setCentralWidget(widget)
 
@@ -30,3 +30,4 @@ app = QApplication(sys.argv)
 w = MainWindow()
 w.show()
 app.exec()
+## para hacer un slot par aun signal debo verificar que parametros entran en el signal

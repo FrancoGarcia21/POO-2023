@@ -8,7 +8,7 @@ class MainWindow(QMainWindow):
         button = QPushButton("Apreta")
         button.setCheckable(True)
         button.clicked.connect(self.accion_boton)
-        button.clicked.connect(self.was_toggle)
+        button.clicked.connect(self.was_toggle)# este metodo esta sobrecargado
         self.setCentralWidget(button)
 
     def accion_boton(self):

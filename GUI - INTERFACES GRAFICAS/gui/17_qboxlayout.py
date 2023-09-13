@@ -17,8 +17,8 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.setWindowTitle("Mi App")
-        #layout = QVBoxLayout()
-        layout = QHBoxLayout()
+        layout = QVBoxLayout()#vertical
+        #layout = QHBoxLayout()#horizontal
 
         layout.addWidget(Color('red'))
         layout.addWidget(Color('green'))

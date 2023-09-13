@@ -6,18 +6,18 @@ class MainWindow(QMainWindow):
         super().__init__()
         #inicializo label, input
         self.setWindowTitle("Mi App")
-        self.label = QLabel()
-        self.input = QLineEdit()
+        self.label = QLabel()#texto fijo es este
+        self.input = QLineEdit()#cuadrado de texto donde podemos teclear
         #conecto input con label
         #textChanged es un signal
         #setText es un slot
         self.input.textChanged.connect(self.label.setText)
         #creo un layout y agrego los elementos.
-        layout = QVBoxLayout()
+        layout = QVBoxLayout()# lo que hace ordenar los elementos de forma vertical en forma de cajas
         layout.addWidget(self.input)
         layout.addWidget(self.label)
         #creo un contenedor, agrego el layout y lo agrego a la ventana
-        container = QWidget()
+        container = QWidget()#interfaz graficas en python utilizan el termino widget
         container.setLayout(layout)
         self.setCentralWidget(container)
 

@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.setWindowTitle("Mi App")
-        layout = QGridLayout()
+        layout = QGridLayout()### aca estamos utilizando un grilla para separar como en ajva
 
         layout.addWidget(Color('red'), 0, 0)
         layout.addWidget(Color('green'), 1, 0)

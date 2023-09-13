@@ -34,8 +34,8 @@ class MainWindow(QMainWindow):
 
         layout1.addLayout( layout3 )
         
-        #layout1.setContentsMargins(0,0,0,0)
-        #layout1.setSpacing(20)
+        #layout1.setContentsMargins(0,0,0,0)## es lo margenes
+        #layout1.setSpacing(20)## los espacio entre los diferentes contenedores d elayotut
 
         widget = QWidget()
         widget.setLayout(layout1)

@@ -3,7 +3,7 @@ from BilleteraVirtual import BilleteraVirtual
 from Impuesto import Impuesto
 import random
 
-cuenta1 = Banco("Franco Garcia",1234,100000,39437204)
+cuenta1 = Banco("Franco Garcia",1234,5000,39437204)
 cuenta2 = BilleteraVirtual("Emilia Gallardo", 4032,500,123456)
 
 

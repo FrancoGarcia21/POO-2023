@@ -12,11 +12,11 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Mi Aplicación")
         self.button = QPushButton("Apreta")
         self.button.setCheckable(True)
-        self.button.released.connect(self.toggle)
+        self.button.released.connect(self.toggle)#estoy pasando la funcion , no lo esta llamando/// le mando el codigo entero que uqiero que use
         self.button.setChecked(self.is_checked)
         self.setCentralWidget(self.button)
 
-    def toggle(self):
+    def toggle(self):# las funciones tambien son objetos - un metodo es un objeto
         self.is_checked = self.button.isChecked()
         print(self.is_checked)
 

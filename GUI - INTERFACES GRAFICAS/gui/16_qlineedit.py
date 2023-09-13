@@ -9,7 +9,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Mi App")
         
         widget = QLineEdit()
-        widget.setMaxLength(10)
+        widget.setMaxLength(10)# esta es la longitud maxima
         widget.setPlaceholderText("Ingrese un texto")
 
         widget.returnPressed.connect(self.return_pressed)
